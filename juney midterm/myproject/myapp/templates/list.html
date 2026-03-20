@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student List</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            background: linear-gradient(-45deg, #1e3c72, #2a5298, #6a11cb, #2575fc);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            width: 400px;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.2);
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: rgba(255,255,255,0.4);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: rgba(255,255,255,0.1);
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        li:hover {
+            transform: scale(1.03);
+            background: rgba(255,255,255,0.2);
+        }
+
+        .actions {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🎓 Students</h1>
+
+    <a href="{% url 'student_create' %}" class="btn">+ Add Student</a>
+
+    <ul>
+        {% for student in students %}
+        <li>
+            <strong>{{ student.name }}</strong><br>
+            Age: {{ student.age }}
+
+            <div class="actions">
+                <a href="{% url 'student_update' student.id %}">✏️</a>
+                <a href="{% url 'student_delete' student.id %}">🗑️</a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>
