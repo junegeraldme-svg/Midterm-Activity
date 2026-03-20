@@ -1,3 +1,3 @@
 Midterm activity 1
-![edb5b4ee-2bb5-41ed-931c-85caab49e24d](https://github.com/user-attachments/assets/a95cc623-4f58-4405-b91f-fbd6d5a6446e)
-![967f6d8d-edd5-425d-a202-33039b419af7](https://github.com/user-attachments/assets/a321162f-9961-49f9-894a-ddd793e9cb1b)
+![493a3471-02c7-4e0c-aa75-629e5f4bb906](https://github.com/user-attachments/assets/e8099e4c-c1c6-4099-ad8c-6799b5a6b3e5)
+![57658e48-aa1e-4798-b8dd-b9bc3523d46c](https://github.com/user-attachments/assets/754a67b2-e727-4380-831a-d3891dfbbaf8)
